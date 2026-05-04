@@ -1,0 +1,9 @@
+h1 {
+    color: red;
+}
+
+#first, #second {
+    color: hotpink;
+}
+
+/* Inline >> <style> Tag >> External*/

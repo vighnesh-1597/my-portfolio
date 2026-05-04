@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live weather dashboard with real-time conditions, wind, humidity, sunrise and sunset data.">
+    <title>Weather Dashboard | Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <div class="weather-card">
+            <div class="search-box">
+                <button id="location-btn" title="Use Current Location"><i class="fas fa-location-crosshairs"></i></button>
+                <input type="text" id="city-input" placeholder="Enter city name..." spellcheck="false" autocomplete="off">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            
+            <!-- City Recommendations -->
+            <div class="recommendations">
+                <span class="rec-chip" data-city="London">London</span>
+                <span class="rec-chip" data-city="New York">New York</span>
+                <span class="rec-chip" data-city="Tokyo">Tokyo</span>
+                <span class="rec-chip" data-city="Mumbai">Mumbai</span>
+            </div>
+            
+            <!-- Error Message -->
+            <div id="error-message" class="hidden">City not found. Please try again.</div>
+            
+            <!-- Weather Info (Hidden initially until searched) -->
+            <div class="weather-info hidden" id="weather-info">
+                <h2 class="city" id="city-name">London, UK</h2>
+                <p class="date-time" id="date-time">Monday, 10:30 AM</p>
+                <div class="main-temp">
+                    <img src="" alt="Weather Icon" class="weather-icon" id="weather-icon" loading="lazy">
+                    <h1 class="temp" id="temperature">24°C</h1>
+                </div>
+                <p class="description" id="description">Sunny</p>
+                
+                <div class="details">
+                    <div class="col">
+                        <i class="fas fa-water"></i>
+                        <div>
+                            <p class="humidity" id="humidity">50%</p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <p class="wind" id="wind-speed">15 km/h</p>
+                            <p>Wind</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details" style="margin-top: 15px;">
+                    <div class="col">
+                        <i class="fas fa-sunrise"></i>
+                        <div>
+                            <p class="sun-time" id="sunrise">6:00 AM</p>
+                            <p>Sunrise</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-sunset"></i>
+                        <div>
+                            <p class="sun-time" id="sunset">7:00 PM</p>
+                            <p>Sunset</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

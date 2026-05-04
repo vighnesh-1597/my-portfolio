@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Live currency converter with real-time exchange rates and 7-day trend chart.">
+    <title>Currency Converter | Project</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+            <p class="project-title">Currency Converter</p>
+            <p class="project-description">A sleek, functional currency converter built with HTML, CSS, JavaScript, and the ExchangeRate-API.</p>
+
+    <div class="app-container">
+        
+        <div class="converter-card">
+            <div class="card-header">
+                <h2>Currency Converter</h2>
+                <p>Live global exchange rates</p>
+            </div>
+
+            <!-- Error Message -->
+            <div id="error-message" class="error-msg hidden">
+                <i class="fas fa-exclamation-circle"></i> <span>Failed to fetch rates.</span>
+            </div>
+
+            <div class="converter-body">
+                <div class="input-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="amount" value="1" min="0" step="any" autocomplete="off">
+                </div>
+
+                <div class="currency-selectors">
+                    <div class="select-group">
+                        <label>From</label>
+                        <div class="custom-select" id="from-select-container">
+                            <div class="select-selected" id="from-selected">USD</div>
+                            <div class="select-items hidden" id="from-dropdown">
+                                <input type="text" class="select-search" id="from-search" placeholder="Search...">
+                                <div class="options-list" id="from-options"></div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="from-currency" value="USD">
+                    </div>
+
+                    <button id="swap-btn" class="swap-btn" title="Swap currencies">
+                        <i class="fas fa-exchange-alt"></i>
+                    </button>
+
+                    <div class="select-group">
+                        <label>To</label>
+                        <div class="custom-select" id="to-select-container">
+                            <div class="select-selected" id="to-selected">EUR</div>
+                            <div class="select-items hidden" id="to-dropdown">
+                                <input type="text" class="select-search" id="to-search" placeholder="Search...">
+                                <div class="options-list" id="to-options"></div>
+                            </div>
+                        </div>
+                        <input type="hidden" id="to-currency" value="EUR">
+                    </div>
+                </div>
+
+                <div class="result-container">
+                    <p id="converted-result" class="result-value">0.00</p>
+                    <p id="conversion-rate" class="rate-text">Loading...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7-Day Comparison Chart -->
+        <div class="comparison-card">
+            <div class="card-header">
+                <h2>7-Day Currency Trend</h2>
+                <p>USD & EUR vs INR</p>
+            </div>
+            <div class="comparison-container">
+                <div class="chart-wrapper" id="comparison-chart-wrapper">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+                <div class="chart-loading" id="comparison-loading">
+                    <p>Loading chart data...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" integrity="sha384-NrKB+u6Ts6AtkIhwPixiKTzgSKNblyhlk0Sohlgar9UHUBzai/sgnNNWWd291xqt" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>

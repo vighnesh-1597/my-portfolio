@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page not found - Vighnesh Chityal Portfolio">
+    <title>404 | Page Not Found</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .not-found-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            gap: 1.5rem;
+        }
+        .not-found-code {
+            font-size: 6rem;
+            font-weight: 700;
+            line-height: 1;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+        }
+        .not-found-section p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo">My Portfolio.</a>
+        </div>
+        <div class="header-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Work</a></li>
+            </ul>
+        </div>
+        <div class="header-right">
+            <a href="contact.html" class="btn btn-primary">Reach Out</a>
+            <div class="menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <main class="container">
+            <section class="not-found-section">
+                <div class="not-found-code">404</div>
+                <h1>Page Not Found</h1>
+                <p>The page you're looking for doesn't exist or has been moved.</p>
+                <a href="index.html" class="btn btn-primary">Back to Home &rarr;</a>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p style="font-size: 0.8rem; letter-spacing: 1px; color: var(--text-secondary);">&copy; 2026 Vighnesh
+                Chityal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="transition.js"></script>
+</body>
+
+</html>

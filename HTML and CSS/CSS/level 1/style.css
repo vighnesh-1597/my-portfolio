@@ -1,0 +1,29 @@
+body{
+    background-color: blanchedalmond;
+}
+
+/* h1{
+    color: brown;
+} */
+
+*{
+    color: blue;
+}
+
+#para {
+    color: brown;
+}
+
+.first{
+    color: antiquewhite;
+    background-color: coral;
+}
+
+
+div p{
+    color: red;
+}
+
+h2, h3{
+    color: chartreuse;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Vighnesh Chityal">
+    <title>Contact | Vighnesh Chityal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-left">
+            <a href="index.html" class="logo">My Portfolio.</a>
+        </div>
+
+        <div class="header-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Work</a></li>
+            </ul>
+        </div>
+
+        <div class="header-right">
+            <div class="menu-btn"><i class="fas fa-bars"></i></div>
+        </div>
+    </header>
+
+    <div id="toast" style="display:none;position:fixed;bottom:2rem;right:2rem;background:#1a1a1a;color:#fff;padding:1rem 1.5rem;border-radius:8px;font-size:0.9rem;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,0.3);">Message sent! I'll get back to you soon.</div>
+    <div class="page-wrapper">
+        <main class="container">
+            <section class="contact-layout">
+                <div class="contact-left">
+                    <span class="overline" style="margin-bottom: 1rem;">Let's Talk</span>
+                    <h2>Start a<br>Conversation</h2>
+                    <p style="color: var(--text-secondary); margin-bottom: 2rem; max-width: 400px;">Got a project in
+                        mind, a question, or just want to say hi? I'd love to hear from you.</p>
+
+                    <a href="mailto:chityalvighnesh@gmail.com?subject=Let%27s%20Connect&body=Hi%20Vighnesh%2C"
+                        class="email-link">chityalvighnesh@gmail.com</a>
+
+                    <div style="margin-top: 4rem;">
+                        <span class="overline">Connect</span>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <a href="https://www.instagram.com/vighnesh_chityal" aria-label="Instagram" target="_blank"
+                                rel="noopener noreferrer" class="btn-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/vighnesh-chityal-b0144536a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+                                aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" class="btn-icon"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/vighnesh-1597" aria-label="GitHub" target="_blank"
+                                rel="noopener noreferrer" class="btn-icon"><i class="fab fa-github"></i></a>
+                            <a href="mailto:chityalvighnesh@gmail.com?subject=Let%27s%20Connect&body=Hi%20Vighnesh%2C"
+                                aria-label="Email" class="btn-icon"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-right">
+                    <form class="contact-form" action="#" method="POST" onsubmit="event.preventDefault();const t=document.getElementById('toast');t.style.display='block';setTimeout(()=>t.style.display='none',3500);this.reset();">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="What's your name? *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your email address *" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" placeholder="Tell me about your project... *"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <div class="footer-content" style="justify-content: center;">
+            <p style="font-size: 0.8rem; letter-spacing: 1px; color: var(--text-secondary);">&copy; 2026 Vighnesh
+                Chityal. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="transition.js"></script>
+</body>
+
+</html>
